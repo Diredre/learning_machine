@@ -1,74 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <androidx.cardview.widget.CardView
+    android:layout_marginTop="10dp"
+    android:clickable="true">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp">
-        <RelativeLayout
+        android:layout_marginBottom="10dp">
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/fade_blue">
-            <ImageView
-                android:id="@+id/item_collect_iv_fm"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_margin="10dp"
-                android:src="@mipmap/file"/>
+            app:cardCornerRadius="20dp">
             <RelativeLayout
+                android:id="@+id/item_collect_all"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:gravity="center_vertical"
-                android:layout_alignTop="@id/item_collect_iv_fm"
-                android:layout_alignBottom="@id/item_collect_iv_fm"
-                android:layout_toRightOf="@id/item_collect_iv_fm">
-
-                <TextView
-                    android:id="@+id/item_collect_tv_title"
+                android:background="@color/fade_blue">
+                <ImageView
+                    android:id="@+id/item_collect_iv_fm"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/file"/>
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="国家中小学生网络平台"
-                    android:textColor="@color/text_black_color"
-                    android:textSize="18sp" />
-
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_below="@id/item_collect_tv_title"
-                    android:layout_alignBottom="@id/item_collect_tv_date"
-                    android:src="@mipmap/file" />
-
-                <TextView
-                    android:id="@+id/item_collect_tv_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/item_collect_tv_title"
-                    android:layout_marginLeft="30dp"
-                    android:text="2022年3月22日"
-                    android:textColor="@color/text_gray_color"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/item_collect_tv_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_below="@id/item_collect_tv_title"
-                    android:layout_toRightOf="@id/item_collect_tv_date"
-                    android:text="19:39"
-                    android:textSize="15sp"
-                    android:textColor="@color/text_gray_color"/>
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:layout_alignTop="@id/item_collect_iv_fm"
+                    android:layout_alignBottom="@id/item_collect_iv_fm"
+                    android:layout_toRightOf="@id/item_collect_iv_fm">
+                    <TextView
+                        android:id="@+id/item_collect_tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="国家中小学生网络平台"
+                        android:textColor="@color/text_black_color"
+                        android:textSize="18sp" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_below="@id/item_collect_tv_title"
+                        android:layout_alignBottom="@id/item_collect_tv_date"
+                        android:src="@mipmap/file" />
+                    <TextView
+                        android:id="@+id/item_collect_tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/item_collect_tv_title"
+                        android:layout_marginLeft="30dp"
+                        android:text="2022年3月22日"
+                        android:textColor="@color/text_gray_color"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/item_collect_tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/item_collect_tv_title"
+                        android:layout_toRightOf="@id/item_collect_tv_date"
+                        android:text="19:39"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_gray_color"/>
+                </RelativeLayout>
             </RelativeLayout>
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/item_collect_btn_del"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@color/main_blue"
+        android:text="删除"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"/>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

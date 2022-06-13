@@ -2,17 +2,20 @@ package com.example.learning_machine;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.learning_machine.databinding.ActivityCollectBinding;
 
 import java.util.ArrayList;
@@ -23,6 +26,7 @@ public class CollectActivity extends AppCompatActivity implements View.OnClickLi
     private ActivityCollectBinding binding;
 
     private TextView col_tv_collect, col_tv_history;
+    private RelativeLayout col_rl_collect, col_rl_history;
     private RecyclerView col_rv;
     private CollectAdapter collectAdapter;
     private List<CollectBean> collectBeanList = new ArrayList<>();
@@ -57,6 +61,12 @@ public class CollectActivity extends AppCompatActivity implements View.OnClickLi
         col_tv_history = binding.colTvHistory;
         col_tv_history.setOnClickListener(this);
 
+        col_rl_collect = binding.colRlCollect;
+        col_rl_collect.setOnClickListener(this);
+
+        col_rl_history = binding.colRlHistory;
+        col_rl_history.setOnClickListener(this);
+
         initData();
 
         col_rv = binding.colRv;
@@ -87,13 +97,16 @@ public class CollectActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        clearAll();
         switch (v.getId()){
+            case R.id.col_rl_collect:
             case R.id.col_tv_collect:
+                clearAll();
                 col_tv_collect.setTextColor(Color.parseColor("#FFFFFF"));
                 col_tv_collect.setBackgroundColor(Color.parseColor("#74D4E1"));
                 break;
+            case R.id.col_rl_history:
             case R.id.col_tv_history:
+                clearAll();
                 col_tv_history.setTextColor(Color.parseColor("#FFFFFF"));
                 col_tv_history.setBackgroundColor(Color.parseColor("#74D4E1"));
                 break;

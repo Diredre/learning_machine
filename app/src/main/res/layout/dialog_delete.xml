@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_delete"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="200dp"
+        android:padding="20dp"
+        android:background="@drawable/bg_dialog_delete">
+
+        <ImageView
+            android:id="@+id/dialog_del_iv_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/cancel" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="是否删除这条内容"
+            android:textColor="@color/text_black_color"
+            android:textSize="18sp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="40dp"
+                android:elevation="0dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+                <TextView
+                    android:id="@+id/dialog_del_tv_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="删除"
+                    android:textSize="16sp"
+                    android:background="@color/main_blue"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    android:padding="10dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="30dp"
+                android:elevation="0dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+                <TextView
+                    android:id="@+id/dialog_del_tv_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="取消"
+                    android:background="@color/fade_blue"
+                    android:textColor="@color/main_blue"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:padding="10dp"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

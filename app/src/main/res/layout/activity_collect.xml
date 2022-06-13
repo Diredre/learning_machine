@@ -23,53 +23,62 @@
                 android:id="@+id/col_ll_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    cardBackgroundColor="@android:color/transparent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:elevation="0dp"
                     android:layout_marginRight="20dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    app:cardCornerRadius="10dp"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="30dp"
                     app:cardElevation="0dp">
-                    <TextView
-                        android:id="@+id/col_tv_collect"
+
+                    <RelativeLayout
+                        android:id="@+id/col_rl_collect"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:gravity="center"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:textSize="20sp"
-                        android:text="视频收藏"
-                        android:focusableInTouchMode="true"
-                        android:textColor="@color/main_blue"/>
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/col_tv_collect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="视频收藏"
+                            android:textColor="@color/main_blue"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
 
                 <androidx.cardview.widget.CardView
+                    cardBackgroundColor="@android:color/transparent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:elevation="0dp"
                     android:layout_marginLeft="20dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
-                    app:cardCornerRadius="10dp"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="30dp"
                     app:cardElevation="0dp">
-                    <TextView
-                        android:id="@+id/col_tv_history"
+
+                    <RelativeLayout
+                        android:id="@+id/col_rl_history"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:gravity="center"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:textSize="20sp"
-                        android:text="历史浏览"
-                        android:focusableInTouchMode="true"
-                        android:textColor="@color/main_blue"/>
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/col_tv_history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="历史浏览"
+                            android:textColor="@color/main_blue"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
@@ -77,9 +86,9 @@
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/col_ll_top"
-                android:adjustViewBounds="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="30dp"
+                android:adjustViewBounds="true"
                 android:src="@mipmap/manage" />
 
             <androidx.recyclerview.widget.RecyclerView

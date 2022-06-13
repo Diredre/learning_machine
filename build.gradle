@@ -3,10 +3,6 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven() { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven(){ url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/mapr-public' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.2"
@@ -23,11 +19,6 @@ allprojects {
         jcenter() // Warning: this repository is going to shut down soon
         maven { url 'https://jitpack.io' }
         maven { url "https://maven.aliyun.com/repository/public" }
-
-        maven() { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven(){ url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/mapr-public' }
     }
 }
 

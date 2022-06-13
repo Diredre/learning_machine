@@ -43,6 +43,7 @@ public class VideoAdapter extends BaseQuickAdapter<VideoBean, BaseViewHolder> {
         ImageView item_video_iv_usericon = baseViewHolder.getView(R.id.item_video_iv_usericon);
         TextView item_video_tv_username = baseViewHolder.getView(R.id.item_video_tv_username);
         TextView item_video_tv_usertime = baseViewHolder.getView(R.id.item_video_tv_usertime);
+        RelativeLayout item_video_all = baseViewHolder.getView(R.id.item_video_all);
 
         Glide.with(context)
                 .load(videoBean.getFmurl())
@@ -60,6 +61,10 @@ public class VideoAdapter extends BaseQuickAdapter<VideoBean, BaseViewHolder> {
             Intent intent = new Intent(context, FullVideoActivity.class);
             intent.putExtra("VIDEOURL", "xxx");
             context.startActivity(intent);
+        });
+
+        item_video_all.setOnClickListener(v->{
+            context.startActivity(new Intent(context, FullVideoActivity.class));
         });
     }
 }

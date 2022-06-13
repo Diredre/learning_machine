@@ -1,53 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_play"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
-    tools:context=".FullVideoActivity">
+    android:background="#000000">
 
-    <ImageView
-        android:id="@+id/full_iv_back"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@mipmap/back"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"/>
-    <TextView
-        android:id="@+id/full_tv_tit"
+    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+        android:id="@+id/video_player"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="20dp"
-        android:layout_toRightOf="@id/full_iv_back"
-        android:layout_alignTop="@id/full_iv_back"
-        android:layout_alignBottom="@id/full_iv_back"
-        android:gravity="center_vertical"
-        android:text="123"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:maxLines="1"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="20dp"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="10dp"
-            android:src="@mipmap/collect_normal"/>
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:src="@mipmap/like_normal"/>
-    </LinearLayout>
-
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>
