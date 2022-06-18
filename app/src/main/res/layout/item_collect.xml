@@ -34,6 +34,7 @@
                     android:layout_alignTop="@id/item_collect_iv_fm"
                     android:layout_alignBottom="@id/item_collect_iv_fm"
                     android:layout_toRightOf="@id/item_collect_iv_fm">
+
                     <TextView
                         android:id="@+id/item_collect_tv_title"
                         android:layout_width="match_parent"

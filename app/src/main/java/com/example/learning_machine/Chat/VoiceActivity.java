@@ -1,18 +1,18 @@
-package com.example.learning_machine;
+package com.example.learning_machine.Chat;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
+import com.example.learning_machine.Chat.MessageAdapter;
+import com.example.learning_machine.Chat.MessageBean;
+import com.example.learning_machine.R;
 import com.example.learning_machine.databinding.ActivityVoiceBinding;
 
 import java.util.ArrayList;

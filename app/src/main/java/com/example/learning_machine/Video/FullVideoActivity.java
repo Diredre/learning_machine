@@ -1,4 +1,4 @@
-package com.example.learning_machine;
+package com.example.learning_machine.Video;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.learning_machine.R;
 import com.example.learning_machine.databinding.ActivityFullVideoBinding;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;

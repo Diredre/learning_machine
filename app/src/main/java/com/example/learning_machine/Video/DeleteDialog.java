@@ -1,8 +1,7 @@
-package com.example.learning_machine;
+package com.example.learning_machine.Video;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,20 +11,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import android.app.Dialog;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.learning_machine.R;
+import com.example.learning_machine.Video.CollectAdapter;
 
 public class DeleteDialog {
 

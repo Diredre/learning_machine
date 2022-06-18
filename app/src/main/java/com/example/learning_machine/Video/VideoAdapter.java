@@ -1,8 +1,7 @@
-package com.example.learning_machine;
+package com.example.learning_machine.Video;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -12,6 +11,7 @@ import androidx.annotation.Nullable;
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
+import com.example.learning_machine.R;
 
 import java.util.ArrayList;
 import java.util.List;

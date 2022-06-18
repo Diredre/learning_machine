@@ -1,4 +1,4 @@
-package com.example.learning_machine;
+package com.example.learning_machine.View;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -54,4 +54,10 @@ dependencies {
 
     // 侧滑删除栏
     implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    //Gson converter
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
 }

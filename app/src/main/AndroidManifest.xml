@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.learning_machine">
+    package="com.example.learning_machine" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -21,16 +21,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Learning_machine"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
         <activity
-            android:name=".VoiceActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MapActivity"
-            android:exported="true" />
-        <activity
-            android:name=".CollectActivity"
-            android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,13 +32,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FullVideoActivity"
+            android:name=".Xmly.SiteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Chat.VoiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Map.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Video.CollectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Video.FullVideoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:exported="true"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.Full" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Video.VideoMainActivity"
             android:exported="true" />
     </application>
 
