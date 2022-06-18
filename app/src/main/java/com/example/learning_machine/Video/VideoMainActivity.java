@@ -15,13 +15,14 @@ import android.widget.TextView;
 
 import com.example.learning_machine.R;
 import com.example.learning_machine.databinding.ActivityMainBinding;
+import com.example.learning_machine.databinding.ActivityVideoMainBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class VideoMainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private ActivityMainBinding binding;
+    private ActivityVideoMainBinding binding;
 
     private RelativeLayout video_rl_calligra, video_rl_draw, video_rl_tech, video_rl_code,
             video_rl_music, video_rl_sport, video_rl_book;
@@ -50,7 +51,7 @@ public class VideoMainActivity extends AppCompatActivity implements View.OnClick
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);//设置状态栏黑色字
         }
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityVideoMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         initView();
