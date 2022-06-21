@@ -8,28 +8,32 @@
         android:id="@+id/it_mes_y_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="120dp"
         android:orientation="horizontal"
         android:paddingTop="10dp">
         <com.example.learning_machine.View.RoundImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:src="@mipmap/you"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:gravity="left"
-            android:background="@drawable/your_reply">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left">
             <TextView
                 android:id="@+id/it_tv_y"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="14sp"
+                android:textSize="22sp"
+                android:gravity="left"
                 android:text="说了一句话。"
-                android:textColor="#5F6670"/>
-        </LinearLayout>
+                android:layout_marginRight="120dp"
+                android:textColor="@color/main_blue"
+                android:background="@drawable/popobg"/>
+        </RelativeLayout>
     </LinearLayout>
 
 
@@ -38,25 +42,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
+        android:layout_marginLeft="120dp"
+        android:layout_marginBottom="20dp"
         android:paddingTop="10dp"
         android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_gravity="right"
-            android:background="@drawable/my_send">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
             <TextView
                 android:id="@+id/it_tv_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="120dp"
+                android:background="@drawable/popobg"
                 android:text="说了一句话。"
-                android:textSize="14sp"
-                android:textColor="#fff"/>
-        </LinearLayout>
+                android:textColor="@color/main_blue"
+                android:textSize="22sp" />
+        </RelativeLayout>
         <com.example.learning_machine.View.RoundImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:src="@mipmap/myicon"/>

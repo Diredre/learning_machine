@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.learning_machine.Chat.MessageAdapter;
 import com.example.learning_machine.Chat.MessageBean;
+import com.example.learning_machine.MainActivity;
 import com.example.learning_machine.R;
 import com.example.learning_machine.databinding.ActivityVoiceBinding;
 
@@ -26,6 +29,7 @@ public class VoiceActivity extends AppCompatActivity {
     private RecyclerView voice_rv;
     private EditText voice_et_input;
     private Button voice_btn_send;
+    private ImageView voice_iv_back, voice_iv_home;
 
     private MessageAdapter messageAdapter;
     private List<MessageBean> messageBeanList = new ArrayList<>();
@@ -74,6 +78,17 @@ public class VoiceActivity extends AppCompatActivity {
                 messageAdapter.notifyItemInserted(messageBeanList.size() - 1);      //通知列表有新数据插入
                 voice_rv.scrollToPosition(messageBeanList.size() - 1);                      //定位在最后一行
             }
+        });
+
+        voice_iv_back = binding.voiceIvBack;
+        voice_iv_back.setOnClickListener(v->{
+            this.finish();
+        });
+
+        voice_iv_home = binding.voiceIvHome;
+        voice_iv_home.setOnClickListener(v->{
+            this.finish();
+            startActivity(new Intent(this, MainActivity.class));
         });
     }
 
