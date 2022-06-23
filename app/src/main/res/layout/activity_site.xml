@@ -12,7 +12,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
+        android:layout_margin="40px"
         app:cardCornerRadius="25dp">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,6 +25,22 @@
                 android:layout_height="match_parent"
                 android:overScrollMode="never"
                 android:scrollbars="none"/>
+
+            <ImageView
+                android:id="@+id/site_iv_back"
+                android:layout_width="48px"
+                android:layout_height="48px"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="40px"
+                android:src="@mipmap/main_back" />
+            <ImageView
+                android:id="@+id/site_iv_home"
+                android:layout_width="48px"
+                android:layout_height="48px"
+                android:src="@mipmap/home"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40px"
+                android:layout_marginTop="40px"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

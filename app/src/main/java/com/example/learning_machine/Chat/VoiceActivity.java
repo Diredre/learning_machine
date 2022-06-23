@@ -88,7 +88,7 @@ public class VoiceActivity extends AppCompatActivity {
         voice_iv_home = binding.voiceIvHome;
         voice_iv_home.setOnClickListener(v->{
             this.finish();
-            startActivity(new Intent(this, MainActivity.class));
+//            startActivity(new Intent(this, MainActivity.class));
         });
     }
 

@@ -2,12 +2,15 @@ package com.example.learning_machine.Xmly;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.ImageView;
 
+import com.example.learning_machine.MainActivity;
 import com.example.learning_machine.R;
 import com.example.learning_machine.databinding.ActivitySiteBinding;
 
@@ -16,6 +19,7 @@ public class SiteActivity extends AppCompatActivity {
     private ActivitySiteBinding binding;
 
     private WebView site_wb;
+    private ImageView site_iv_back, site_iv_home;
 
 
     @Override
@@ -42,7 +46,6 @@ public class SiteActivity extends AppCompatActivity {
 
 
     private void initView(){
-
         site_wb = binding.siteWb;
 
         WebSettings ws = site_wb.getSettings();
@@ -58,6 +61,22 @@ public class SiteActivity extends AppCompatActivity {
         }
 
         site_wb.loadUrl("https://www.ximalaya.com/");
+
+        site_iv_back = binding.siteIvBack;
+        site_iv_back.setOnClickListener(v->{
+            if (site_wb.canGoBack()) {
+                site_wb.goBack();   //返回上个页面
+                return;
+            } else {
+                finish();
+            }
+        });
+
+        site_iv_home = binding.siteIvHome;
+        site_iv_home.setOnClickListener(v->{
+            finish();
+//            startActivity(new Intent(this, MainActivity.class));
+        });
     }
 
 
