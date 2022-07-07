@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import com.example.learning_machine.MainActivity;
 import com.example.learning_machine.R;
 import com.example.learning_machine.databinding.ActivitySiteBinding;
+import com.leaf.library.StatusBarUtil;
 
 public class SiteActivity extends AppCompatActivity {
 
@@ -29,13 +30,8 @@ public class SiteActivity extends AppCompatActivity {
         if (getSupportActionBar() != null){
             getSupportActionBar().hide();
         }
-
-        if (Build.VERSION.SDK_INT >= 21) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.white));
-        }
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);//设置状态栏黑色字
-        }
+        StatusBarUtil.setTransparentForWindow(this);
+        StatusBarUtil.setDarkMode(this);
 
         binding = ActivitySiteBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

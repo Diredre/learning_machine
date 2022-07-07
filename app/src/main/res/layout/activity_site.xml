@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_grad"
-    tools:context=".Xmly.SiteActivity">
+    tools:context=".Xmly.SiteActivity"
+    android:paddingTop="20dp">
 
 
     <androidx.cardview.widget.CardView
@@ -28,19 +29,20 @@
 
             <ImageView
                 android:id="@+id/site_iv_back"
-                android:layout_width="48px"
-                android:layout_height="48px"
-                android:layout_marginLeft="40px"
-                android:layout_marginTop="40px"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="48px"
                 android:src="@mipmap/main_back" />
+
             <ImageView
                 android:id="@+id/site_iv_home"
-                android:layout_width="48px"
-                android:layout_height="48px"
-                android:src="@mipmap/home"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="40px"
-                android:layout_marginTop="40px"/>
+                android:layout_marginTop="48px"
+                android:layout_marginRight="60dp"
+                android:src="@mipmap/home" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

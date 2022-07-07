@@ -10,193 +10,71 @@
 
     <ImageView
         android:id="@+id/main_iv_back"
-        android:layout_width="48px"
-        android:layout_height="48px"
-        android:layout_marginLeft="40px"
-        android:layout_marginTop="40px"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="48px"
         android:src="@mipmap/main_back" />
+
     <ImageView
         android:id="@+id/main_iv_home"
-        android:layout_width="48px"
-        android:layout_height="48px"
-        android:src="@mipmap/home"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="40px"
-        android:layout_marginTop="40px"/>
+        android:layout_marginTop="48px"
+        android:layout_marginRight="60dp"
+        android:src="@mipmap/home" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="70dp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         android:orientation="horizontal">
-        <androidx.cardview.widget.CardView
+        <ImageView
+            android:id="@+id/main_iv_map"
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="60dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/zjzg"/>
+        <ImageView
+            android:id="@+id/main_iv_story"
             android:layout_weight="1"
-            android:elevation="10dp"
-            app:cardMaxElevation="10dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
-                android:id="@+id/main_rl_map"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="走进中国"
-                    android:layout_above="@id/main_tv_map"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/qsyk_txt"/>
-                <TextView
-                    android:id="@+id/main_tv_map"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="走进中国走进中国走进中国"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textSize="10sp"
-                    android:textColor="@color/qsyk_txt"/>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/xngsh"/>
+        <ImageView
+            android:id="@+id/main_iv_cook"
             android:layout_weight="1"
-            android:elevation="10dp"
-            app:cardMaxElevation="10dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
-                android:id="@+id/main_rl_story"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="小牛故事会"
-                    android:layout_above="@id/main_tv_story"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/qsyk_txt"/>
-                <TextView
-                    android:id="@+id/main_tv_story"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="小牛故事会小牛故事会小牛故事会"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textSize="10sp"
-                    android:textColor="@color/qsyk_txt"/>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/xzf"/>
+        <ImageView
+            android:id="@+id/main_iv_xmly"
             android:layout_weight="1"
-            android:elevation="10dp"
-            app:cardMaxElevation="10dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
-                android:id="@+id/main_rl_cook"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="学做饭"
-                    android:layout_above="@id/main_tv_cook"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/qsyk_txt"/>
-                <TextView
-                    android:id="@+id/main_tv_cook"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="学做饭学做饭学做饭"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textSize="10sp"
-                    android:textColor="@color/qsyk_txt"/>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/xmly"/>
+        <ImageView
+            android:id="@+id/main_iv_chat"
             android:layout_weight="1"
-            android:elevation="10dp"
-            app:cardMaxElevation="10dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
-                android:id="@+id/main_rl_xmly"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="喜马拉雅"
-                    android:layout_above="@id/main_tv_xmly"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/qsyk_txt"/>
-                <TextView
-                    android:id="@+id/main_tv_xmly"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="喜马拉雅喜马拉雅喜马拉雅"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textSize="10sp"
-                    android:textColor="@color/qsyk_txt"/>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:elevation="10dp"
-            app:cardMaxElevation="10dp"
-            app:cardCornerRadius="20dp">
-            <RelativeLayout
-                android:id="@+id/main_rl_chat"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="聊天室"
-                    android:layout_above="@id/main_tv_chat"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/qsyk_txt"/>
-                <TextView
-                    android:id="@+id/main_tv_chat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="聊天室聊天室聊天室"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textSize="10sp"
-                    android:textColor="@color/qsyk_txt"/>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
+            android:layout_marginRight="60dp"
+            android:src="@mipmap/lts"/>
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="168dp"
+        android:layout_height="236dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/you"/>
 </RelativeLayout>
